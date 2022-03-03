@@ -9,7 +9,7 @@
  *
  */
 
-function isEvenOrOdd(arrayNumbers) {
+function isEvenOrOdd() {
     const green = document.getElementById('green-text');
     const red = document.getElementById('red-text');
 
