@@ -9,18 +9,24 @@
  *
  */
 
-function isEvenOrOdd(number) {
-    const green = document.getElementById('green-text');
-    const red = document.getElementById('red-text');
+const green = document.getElementById('green-text');
+const red = document.getElementById('red-text');
 
-    // const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    for (let i = 0; i < arrayNumbers.length; i++) {
-        if (arrayNumbers[i] % 2 === 0) {
-            return true;
-            // red.innerHTML += `<p class="text-danger">${arrayNumbers[i]}</p>`;
-        } else {
-            return false;
-            // green.innerHTML += `<p class="text-success">${arrayNumbers[i]}</p>`;
-        }
+const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < arrayNumbers.length; i++) {
+    if (isEvenOrOdd(arrayNumbers[i])) {
+        red.innerHTML += `<p class="text-danger">${arrayNumbers[i]}</p>`;
+    } else {
+        green.innerHTML += `<p class="text-success">${arrayNumbers[i]}</p>`;
     }
 }
+
+function isEvenOrOdd(number) {
+    if (number % 2 == 0) {
+        return true;
+    } 
+    return false;
+}
+
+
